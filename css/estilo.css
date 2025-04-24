@@ -1,0 +1,199 @@
+/* Limpando formatações */
+* {
+    margin: 0;  /* Remove a margem de todos os elementos */
+    padding: 0; /* Remove o padding de todos os elementos */
+  }
+  
+  /* Estilo geral do corpo da página */
+  body {
+    font-size: 1em; /* Define o tamanho da fonte para o padrão do navegador */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Define a fonte da página */
+    background: white; /* Define o fundo da página como branco */
+  }
+  
+  /* Estilo do header */
+  header {
+    background: black; /* Define o fundo do header como preto */
+    padding: 25px; /* Adiciona 25px de espaço interno ao redor do conteúdo do header */
+    text-align: center; /* Centraliza o texto dentro do header */
+    display: flex; /* Utiliza o layout flexbox para o header */
+    justify-content: space-between; /* Distribui os itens nas extremidades esquerda e direita */
+  }
+  
+  header img {
+    max-width: 100%; /* Faz com que a imagem ocupe no máximo 100% da largura do contêiner */
+    height: auto; /* Mantém a altura da imagem proporcional à largura */
+  }
+  
+  /* Estilo para os links no menu */
+  nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Organiza os itens da lista em linha */
+    justify-content: center; /* Alinha os itens do menu no centro */
+    align-items: center; /* Alinha os itens do menu verticalmente */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha de baixo, caso necessário */
+    padding: 20px 0; /* Adiciona espaçamento de 20px acima e abaixo */
+  }
+  
+  nav ul li {
+    margin: 0 5px; /* Adiciona uma margem de 5px à esquerda e direita dos itens do menu */
+  }
+  
+  nav ul li:not(:last-child)::after {
+    margin-left: 10px; /* Adiciona margem à esquerda entre os itens, exceto o último */
+    color: white; /* Define a cor do texto como branco */
+  }
+  
+  /* Estilo dos botões */
+  .botao {
+    background-color: grey; /* Define o fundo do botão como cinza */
+    color: white; /* Define a cor do texto do botão como branco */
+    padding: 15px 30px; /* Adiciona 15px de padding em cima e embaixo e 30px nas laterais */
+    margin: 10px; /* Adiciona 10px de margem ao redor do botão */
+    border: none; /* Remove qualquer borda ao redor do botão */
+    border-radius: 30px; /* Arredonda os cantos do botão */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold; /* Deixa o texto do botão em negrito */
+    font-size: 1.1em; /* Aumenta ligeiramente o tamanho da fonte do botão */
+    display: inline-block; /* Exibe o botão como um bloco inline (ao lado de outros itens) */
+    transition: all 0.3s ease; /* Adiciona uma transição suave para qualquer alteração de estilo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave ao botão */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .botao:hover {
+    background-color: #444; /* Muda a cor do botão quando ele é passado por cima */
+    transform: scale(1.05); /* Aumenta levemente o tamanho do botão ao passar o mouse */
+  }
+  
+  /* Resetando estilo de lista */
+  ul {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+  }
+  
+  /* Estilo para os itens do menu */
+  #menu > ul > li {
+    display: inline-block; /* Exibe os itens de menu na horizontal */
+    position: relative; /* Necessário para o posicionamento do submenu */
+  }
+  
+  /* Estilo dos links do menu */
+  #menu a {
+    color: white; /* Define a cor do texto como branco */
+    text-decoration: none; /* Remove o sublinhado */
+    padding: 10px 20px; /* Adiciona padding ao redor dos links */
+    display: block; /* Faz com que o link ocupe toda a área de seu contêiner */
+    font-weight: bold; /* Deixa o texto em negrito */
+  }
+  
+  .menu ul {
+    list-style: none; /* Remove o estilo de lista */
+    background-color: #333; /* Define o fundo do menu suspenso como cinza escuro */
+    padding: 10px 20px; /* Adiciona padding dentro do menu suspenso */
+    border-radius: 8px; /* Arredonda os cantos do menu */
+  }
+  
+  .menu ul li {
+    position: relative; /* Necessário para o submenu */
+  }
+  
+  .dropdown-toggle {
+    color: white; /* Define a cor do texto como branco */
+    padding: 12px 20px; /* Adiciona padding ao redor do link */
+    cursor: pointer; /* Altera o cursor para um ponteiro (mãozinha) ao passar sobre o link */
+    font-weight: bold; /* Deixa o texto em negrito */
+    display: block; /* Exibe o link como bloco */
+  }
+  
+  .dropdown-menu {
+    display: none; /* Inicialmente oculta o menu suspenso */
+    position: absolute; /* Posiciona o menu suspenso abaixo do link */
+    background-color: #444; /* Define o fundo do submenu */
+    min-width: 180px; /* Define a largura mínima do submenu */
+    top: 100%; /* Posiciona o submenu imediatamente abaixo do link */
+    left: 0; /* Alinha o submenu à esquerda */
+    border-radius: 10px; /* Arredonda os cantos do submenu */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao submenu */
+    z-index: 1; /* Garante que o submenu fique acima de outros elementos */
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block; /* Exibe o submenu quando o item do menu for passado por cima */
+  }
+  
+  .dropdown-item {
+    color: white; /* Define a cor do texto como branco */
+    padding: 12px 16px; /* Adiciona padding aos itens do submenu */
+    text-decoration: none; /* Remove o sublinhado */
+    display: block; /* Faz com que o item ocupe toda a área de seu contêiner */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave de fundo */
+  }
+  
+  .dropdown-item:hover {
+    background-color: #555; /* Altera a cor do fundo ao passar o mouse sobre o item */
+  }
+  
+  /* Estilo para o título secundário */
+  .h1-preto {
+    color: black; /* Define a cor do texto como preto */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Define a fonte */
+  }
+  
+  /* Hero: vídeo como fundo */
+  .hero {
+    position: relative; /* Define o contêiner como relativo para posicionar os elementos dentro dele */
+    width: 100%; /* Define a largura como 100% */
+    height: 100vh; /* Define a altura como 100% da altura da tela */
+    overflow: hidden; /* Garante que o conteúdo que ultrapassar o contêiner seja escondido */
+  }
+  
+  #video-bd {
+    position: absolute; /* Posiciona o vídeo de forma absoluta dentro do contêiner */
+    top: 0; /* Posiciona o vídeo no topo do contêiner */
+    left: 0; /* Posiciona o vídeo à esquerda */
+    width: 100%; /* Faz o vídeo ocupar toda a largura do contêiner */
+    height: 100%; /* Faz o vídeo ocupar toda a altura do contêiner */
+    object-fit: cover; /* Garante que o vídeo cubra toda a área do contêiner sem distorção */
+  }
+  
+  /* Conteúdo sobre o vídeo */
+  .conteudo-hero {
+    position: absolute; /* Posiciona o conteúdo de forma absoluta sobre o vídeo */
+    top: 50%; /* Coloca o conteúdo no meio verticalmente */
+    left: 50%; /* Coloca o conteúdo no meio horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o conteúdo para garantir que ele fique exatamente no centro */
+    text-align: center; /* Centraliza o texto */
+    z-index: 2; /* Coloca o conteúdo acima do vídeo */
+    color: white; /* Define a cor do texto como branco */
+    padding: 20px; /* Adiciona espaçamento interno ao redor do conteúdo */
+  }
+  
+  /* Estilo para o título branco */
+  .h1-branco {
+    font-size: 3rem; /* Define o tamanho da fonte como 3rem */
+    color: white; /* Define a cor do texto como branco */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto para destacá-lo */
+    margin-bottom: 30px; /* Adiciona margem abaixo do título */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  /* Ajuste para os itens do menu */
+  #menu ul {
+    flex-wrap: wrap; /* Permite que os itens do menu quebrem a linha quando necessário */
+    justify-content: center; /* Centraliza os itens do menu */
+  }
+  
+  /* Ajuste no estilo do botão */
+  .botao {
+    margin: 10px; /* Adiciona margem ao redor dos botões */
+    padding: 15px 30px; /* Adiciona espaçamento interno ao redor do botão */
+  }
+  
+  
+  .logo {
+    width: 200px; /* ou use height, se preferir */
+    height: 200px;
+    margin: 100px 860px;
+  }
